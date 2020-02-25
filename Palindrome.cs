@@ -28,12 +28,18 @@ public class Program
     string userInputForwards = Regex.Replace(userInput, @"[^0-9a-zA-Z]+", "");
     Console.WriteLine(userInputForwards);
     string userInputBackwards = ReverseString(userInputForwards);
-  Console.WriteLine(userInputBackwards);
+    Console.WriteLine(userInputBackwards);
 
+  Palindrome userInputPalindrome = new Palindrome(userInputForwards, userInputBackwards);
 
-
-    // Palindrome userInputPalindrome = new Palindrome(userInputForwards, userInputBackwards);
-    // ReverseString();
+    if (userInputPalindrome.UserPalindrome == userInputPalindrome.ReversePalindrome)
+    {
+      Console.WriteLine("You made a palindrome!");
+    }
+    else 
+    {
+      Console.WriteLine("You did NOT make a palindrome!");
+    }
 
 
   }
