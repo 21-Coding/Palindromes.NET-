@@ -22,9 +22,6 @@ public class Program
   {
     Console.WriteLine("Enter a string! I'll tell you if it is a palindrome:");
     string userInput = Console.ReadLine().ToLower();
-    // string trimmedInput = userInput.Replace(" ", "");
-    // char[] charsToTrim = { '*', '-' };    
-    // string cleanString = trimmedInput.Trim(charsToTrim);
     string userInputForwards = Regex.Replace(userInput, @"[^0-9a-zA-Z]+", "");
     Console.WriteLine(userInputForwards);
     string userInputBackwards = ReverseString(userInputForwards);
@@ -50,25 +47,8 @@ public class Program
     Array.Reverse(charArr);
     string userInputBackwards = new string (charArr);
     return new string (charArr);
-  
   }
-
-  // public void WordChecker()
-  // {
-  //  if (trimmedInput )
-  // }
-
-
-  // public void CheckReverse()
-  // {
-  //  if (trimmedInput )
-  // }
-
-
-
 }
-
- // string userInputBackwards = reversePalindrome;
 
     
 
